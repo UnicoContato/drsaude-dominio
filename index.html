@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drogaria Dr Saúde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#dc2626',
+                            blue: '#1e3a8a',
+                            light: '#f3f4f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden relative">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/30 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob"></div>
+        <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-red-500/30 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-[500px] h-[500px] bg-purple-500/30 rounded-full mix-blend-multiply filter blur-[100px] opacity-70 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 border-b border-white/10">
+        <div class="absolute inset-0 bg-white/10 backdrop-blur-md -z-10 shadow-sm"></div>
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-brand-red">
+                Dr. Saúde
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center font-medium text-slate-700">
+                <a href="#inicio" class="hover:text-brand-red transition-colors">Início</a>
+                <a href="#sobre" class="hover:text-brand-red transition-colors">Sobre</a>
+                <a href="#servicos" class="hover:text-brand-red transition-colors">Serviços</a>
+                <a href="#galeria" class="hover:text-brand-red transition-colors">Galeria</a>
+                <a href="#contato" class="hover:text-brand-red transition-colors">Contato</a>
+                <a href="https://wa.me/5531983517699" target="_blank" class="glass-button px-6 py-2 rounded-full text-brand-blue font-semibold hover:bg-white/40 transition-all">
+                    (31) 98351-7699
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-3xl text-brand-blue">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white/90 backdrop-blur-xl border-t border-white/20">
+            <div class="flex flex-col p-6 space-y-4 font-medium text-center">
+                <a href="#inicio" class="mobile-link text-slate-700 hover:text-brand-red">Início</a>
+                <a href="#sobre" class="mobile-link text-slate-700 hover:text-brand-red">Sobre</a>
+                <a href="#servicos" class="mobile-link text-slate-700 hover:text-brand-red">Serviços</a>
+                <a href="#galeria" class="mobile-link text-slate-700 hover:text-brand-red">Galeria</a>
+                <a href="#contato" class="mobile-link text-slate-700 hover:text-brand-red">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <div class="hero-image w-full h-full bg-cover bg-center" style="background-image: url('img/5.jpeg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-blue/90 via-slate-900/60 to-transparent"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center text-white mt-16">
+            <h1 class="reveal text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+                Sua saúde em <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-white">primeiro lugar</span>
+            </h1>
+            <p class="reveal delay-200 text-lg md:text-2xl mb-8 font-light max-w-2xl mx-auto opacity-90">
+                Medicamentos, perfumaria e atendimento humanizado.
+            </p>
+            <a href="https://wa.me/5531983517699" target="_blank" class="reveal delay-400 inline-block px-8 py-4 bg-gradient-to-r from-brand-red to-orange-500 rounded-full font-bold text-white shadow-lg shadow-red-500/30 hover:shadow-red-500/50 transform hover:-translate-y-1 transition-all duration-300">
+                Fazer Pedido no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 reveal slide-left">
+                    <h2 class="text-4xl font-bold mb-6 text-brand-blue">Quem Somos</h2>
+                    
+                    <p class="text-lg text-slate-600 mb-4 leading-relaxed">
+                        A <strong>Drogaria Dr. Saúde</strong> é de Contagem. Nosso trabalho é promover a saúde, bem-estar e satisfação de nossos clientes através de um atendimento simples e cortês, de processos eficientes e precisos e de uma grande variedade dos melhores produtos a preços competitivos.
+                    </p>
+                    
+                    <p class="text-lg text-slate-600 mb-4 leading-relaxed">
+                        Tudo isso só é possível graças a uma equipe de profissionais detalhistas, capacitados e dedicados. Dedicação que está refletida na prática de preços justos, na busca incessante por produtos inovadores e em cada sorriso que te acolhe em nossas lojas.
+                    </p>
+                    
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Assim construímos uma relação calorosa, transparente e duradoura com clientes, colaboradores e fornecedores que nos permite crescer de forma sustentável e contribuir para o bem-estar de um número cada vez maior de pessoas.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 reveal slide-right">
+                    <div class="glass-card p-2 rounded-2xl rotate-2 hover:rotate-0 transition-all duration-500">
+                        <img src="img/1.jpeg" alt="Interior da Farmácia" class="rounded-xl w-full h-auto object-cover shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-red font-semibold tracking-wider uppercase">O que oferecemos</span>
+                <h2 class="text-4xl font-bold text-brand-blue mt-2">Nossos Serviços</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 reveal delay-100 group">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-brand-blue rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                        <i class="ph ph-pill text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Medicamentos</h3>
+                    <p class="text-slate-600">Ampla variedade de medicamentos éticos, genéricos e similares com a garantia de procedência.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 reveal delay-200 group">
+                    <div class="w-16 h-16 mx-auto bg-red-100 text-brand-red rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-red group-hover:text-white transition-colors">
+                        <i class="ph ph-sparkle text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Perfumaria & Beleza</h3>
+                    <p class="text-slate-600">Linha completa de cosméticos, dermocosméticos, higiene pessoal e cuidados diários.</p>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl text-center hover:transform hover:-translate-y-2 transition-all duration-300 reveal delay-300 group">
+                    <div class="w-16 h-16 mx-auto bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                        <i class="ph ph-storefront text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-800">Conveniência</h3>
+                    <p class="text-slate-600">Loja de conveniência integrada para facilitar o seu dia a dia com produtos essenciais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-20 bg-white/30 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-brand-blue mb-12 reveal">Nossa Loja</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="img/5.jpeg" alt="Fachada" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="reveal delay-100 overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="img/4.jpeg" alt="Prateleiras" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="reveal delay-200 overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="img/3.jpeg" alt="Interior" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="reveal delay-300 overflow-hidden rounded-xl h-64 shadow-lg group">
+                    <img src="img/2.jpeg" alt="WhatsApp Banner" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <div class="reveal delay-400 overflow-hidden rounded-xl h-64 shadow-lg group md:col-span-2">
+                    <img src="img/1.jpeg" alt="Visão Geral" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="glass-card rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="p-10 md:w-1/2 bg-white/60 backdrop-blur-md">
+                    <h2 class="text-3xl font-bold text-brand-blue mb-8">Fale Conosco</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-red/10 p-3 rounded-lg text-brand-red">
+                                <i class="ph ph-map-pin text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Endereço</h4>
+                                <p class="text-slate-600 text-sm">Al dos Comerciantes, 36, Loja 03 e 04<br>Bairro Cândida Ferreira, Contagem - MG<br>CEP: 32.145-688</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
+                                <i class="ph ph-whatsapp-logo text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">WhatsApp</h4>
+                                <a href="https://wa.me/5531983517699" target="_blank" class="text-slate-600 hover:text-green-600 transition-colors">(31) 98351-7699</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
+                                <i class="ph ph-phone text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Telefone Fixo</h4>
+                                <p class="text-slate-600">(31) 3394-4761</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-blue/10 p-3 rounded-lg text-brand-blue">
+                                <i class="ph ph-envelope-simple text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Email</h4>
+                                <p class="text-slate-600">suportedelrey@hotmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 p-4 bg-slate-100 rounded-lg border border-slate-200">
+                            <p class="text-xs text-slate-500">
+                                <strong>Razão Social:</strong> DR. SAUDE DROGARIA LTDA<br>
+                                <strong>CNPJ:</strong> 16.792.634/0001-64
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2 h-80 md:h-auto bg-slate-200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.6637374828336!2d-44.0381667!3d-19.8541667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6939b4b4b4b4b%3A0x0!2sAl%20dos%20Comerciantes%2C%2036%20-%20Candida%20Ferreira%2C%20Contagem%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1625000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-8 border-t border-white/10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-lg font-bold mb-2">Drogaria Dr Saúde</p>
+            <p class="text-sm text-slate-400 mb-4">© 2026 DR. SAUDE DROGARIA LTDA. Todos os direitos reservados.</p>
+            <button id="privacy-btn" class="text-xs text-slate-500 hover:text-white underline transition-colors">Política de Privacidade</button>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5531983517699" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition-colors animate-bounce-custom">
+        <i class="ph ph-whatsapp-logo text-3xl"></i>
+    </a>
+
+    <div id="privacy-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="close-modal-overlay"></div>
+        <div class="relative bg-white/90 backdrop-blur-xl rounded-2xl p-8 max-w-lg w-full mx-4 shadow-2xl border border-white/20 transform transition-all scale-100">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-500 hover:text-red-500">
+                <i class="ph ph-x text-2xl"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">Política de Privacidade</h3>
+            <div class="text-slate-600 text-sm overflow-y-auto max-h-60 space-y-3 pr-2 custom-scrollbar">
+                <p>A Drogaria Dr Saúde respeita a sua privacidade.</p>
+                <p><strong>1. Coleta de Dados:</strong> Coletamos apenas dados necessários para contato direto via WhatsApp ou telefone.</p>
+                <p><strong>2. Uso das Informações:</strong> As informações não são compartilhadas com terceiros e servem apenas para atendimento ao cliente.</p>
+                <p><strong>3. Cookies:</strong> Este site pode utilizar cookies para melhorar a experiência de navegação.</p>
+                <p><strong>4. Contato:</strong> Para dúvidas sobre seus dados, entre em contato através do nosso email ou telefone oficial.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
